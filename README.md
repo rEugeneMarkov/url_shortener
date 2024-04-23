@@ -5,6 +5,7 @@
 ## Run the terminal
 
 - cd url_shortener
+- cp .env.example .env
 - composer install
 - npm install
 - npm run build
@@ -14,12 +15,15 @@
 - sail artisan migrate
 - sail artisan key:generate
 - sail artisan storage:link
+  
+## Run the tests
+ sail artisan test
 
 ## Run the application server
 http://localhost
 
 ## Run the mail browser
-#### Mailpit (will be needed to verify email after registration) 
+### Mailpit (will be needed to verify email after registration) 
 http://localhost:8025/
 
 ## Run the telescope browser
