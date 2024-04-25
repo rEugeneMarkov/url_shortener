@@ -19,6 +19,9 @@
 ## Run the tests
  sail artisan test
 
+## Run the scedule worker
+sail artisan queue:work --queue=transitions
+
 ## Run the application server
 http://localhost
 

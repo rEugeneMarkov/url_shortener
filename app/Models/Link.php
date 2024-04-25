@@ -2,16 +2,19 @@
 
 namespace App\Models;
 
-use App\Models\Traits\Filterable;
 use Illuminate\Support\Str;
+use App\Models\Traits\Filterable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Services\TransitionsService\Traits\HasTransitions;
+use App\Services\TransitionsService\Contracts\Transitionable;
 
-class Link extends Model
+class Link extends Model implements Transitionable
 {
     use HasFactory;
     use Filterable;
+    use HasTransitions;
 
     protected $table = 'links';
 
